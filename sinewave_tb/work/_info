@@ -1,0 +1,92 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/UoG_file/ModelSim
+Esinewavegenerator
+Z0 w1707084002
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dD:/UoG_file/Year_3/Hardware_System_and_Control/assignment/sinewave_tb
+Z5 8D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/sinewave_tb/sineWaveGenerator.vhd
+Z6 FD:/UoG_file/Year_3/Hardware_System_and_Control/assignment/sinewave_tb/sineWaveGenerator.vhd
+l0
+L6
+V2I[Wc>l??_WN77IXf4aSl1
+!s100 YzLUZ?ABmXFziP3W:;mi72
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1707084507
+!i10b 1
+Z9 !s108 1707084507.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/sinewave_tb/sineWaveGenerator.vhd|
+Z11 !s107 D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/sinewave_tb/sineWaveGenerator.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+R3
+DEx4 work 17 sinewavegenerator 0 22 2I[Wc>l??_WN77IXf4aSl1
+l26
+L17
+V88Q5`9c]MQ^YVniofjaFP1
+!s100 FnU=`T=lVaECYhoFhVh8Z3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Etb_sinewavegenerator
+Z14 w1707084193
+R1
+R2
+R3
+R4
+Z15 8D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/sinewave_tb/tb_sineWaveGenerator.vhd
+Z16 FD:/UoG_file/Year_3/Hardware_System_and_Control/assignment/sinewave_tb/tb_sineWaveGenerator.vhd
+l0
+L5
+V;LR>akljZ`Q1BFQ4LM7Gh1
+!s100 YBg;G3^jL0KPb9n=C>?kS1
+R7
+32
+Z17 !s110 1707084508
+!i10b 1
+Z18 !s108 1707084508.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/sinewave_tb/tb_sineWaveGenerator.vhd|
+Z20 !s107 D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/sinewave_tb/tb_sineWaveGenerator.vhd|
+!i113 1
+R12
+R13
+Atestbench
+R1
+R2
+R3
+Z21 DEx4 work 20 tb_sinewavegenerator 0 22 ;LR>akljZ`Q1BFQ4LM7Gh1
+l25
+L8
+Z22 Vi?88]k4SIXQ8g_CIV9MlY1
+Z23 !s100 gIRnizFeTGNgDH]Qm[iLZ1
+R7
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13

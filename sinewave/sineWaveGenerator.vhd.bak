@@ -1,0 +1,86 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL; 
+
+entity sineWaveGenerator is
+generic ( NUM_POINTS : integer := 50;
+			 MAX_AMPLITUDE : integer := 255
+			 );
+			 
+port (clk :in  std_logic;
+		--frequency_btn, set_btn : in std_logic;
+     -- dataout : out integer range 0 to MAX_AMPLITUDE;
+		led_out: out std_logic_vector(2 downto 0) := "000"
+      );
+		
+end sineWaveGenerator;
+
+architecture Behavioral of sineWaveGenerator is
+
+--type state_type is (s0,s1,s2);
+
+--signal state : state_type := s0;
+
+signal i : integer range 0 to NUM_POINTS := 0;
+type memory_type is array (0 to NUM_POINTS-1) of integer range 0 to MAX_AMPLITUDE;
+
+signal sine : memory_type :=(128, 143, 159, 174, 189, 202, 215, 226,
+										235, 243, 249, 253, 255, 255, 253, 249,
+										243, 235, 226, 215, 202, 189, 174, 159,
+										143, 128, 112, 96, 81, 66, 53, 40,
+										29, 20, 12, 6, 2, 0, 0, 2,
+										6, 12, 20, 29, 40, 53, 66, 81,
+										96, 112);
+
+begin
+
+process(clk)
+
+--constant clock_freq : integer := 50000000;
+--variable frequency, timePeriod,timePeriod_Clock : integer := 0;
+--variable counter : integer := 0;
+--variable counter  : integer;
+variable brightness : integer;
+
+begin
+--case state is:
+	--when s0:
+	--	if frequency_btn = '0'then 
+	--		frequency = frequency + 1;
+	--		state <= s1;
+	--	elsif set_btn = '0' then 
+	--		state <= s2;
+	--	else 
+	--		state<= s0;
+	--	end if;
+		
+	--when s1:
+		--	if button = '0' then 
+			--	state<= s1;
+			--else 
+			--	state<= s0;
+			--end if;
+			
+	--when s2:	
+	  --to check the rising edge of the clock signal
+		
+		if rising_edge(clk) then 
+        led_out<= "000";
+		for j in 0 to 10000 loop  
+			if sine(i) < 200 then
+				led_out <= "111";
+			else
+				led_out<= "000";
+			end if;
+		end loop;
+
+        i <= i + 1;
+
+        if i = NUM_POINTS-1 then
+            i <= 0;
+        end if;
+    end if;
+end process;
+
+end Behavioral;
+

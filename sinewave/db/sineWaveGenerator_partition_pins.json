@@ -1,0 +1,137 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "led_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led0",
+					"strict" : false
+				},
+				{
+					"name" : "led1",
+					"strict" : false
+				},
+				{
+					"name" : "led2",
+					"strict" : false
+				},
+				{
+					"name" : "led3",
+					"strict" : false
+				},
+				{
+					"name" : "sseg0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "set_btn",
+					"strict" : false
+				},
+				{
+					"name" : "frequency_btn",
+					"strict" : false
+				},
+				{
+					"name" : "switch0",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

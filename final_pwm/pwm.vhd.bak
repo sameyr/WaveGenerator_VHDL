@@ -1,0 +1,111 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.ssegPackage.all;
+
+entity tallyCounter_mealy is port
+(
+	button, switch10, switch100, changeState_switch, set_btn, reset, clk 		: in std_logic;
+	pwm 																								:out std_logic; 
+	sseg0, sseg1, sseg2,sseg6	  			   												: out std_logic_vector(7 downto 0)	
+);
+end tallyCounter_mealy;
+
+architecture behavioural of tallyCounter_mealy is
+
+-- Build an enumerated type for the state machine
+type state_type is (s0, s1, s2, s3, s4, s5);
+
+signal state : state_type := s0;
+
+begin
+
+process(clk, button, switch100, switch10, changeState_switch, reset)
+
+	constant clock_freq : integer := 50000000000;
+	variable frequency , dutyCycle , counter, period, dutyCyclePeriod: integer := 0;
+	variable timer : integer range 0 to 150000000 := 0;
+
+begin 
+
+	if (rising_edge(clk)) then
+	case state is 
+		when s0 =>
+			if to_integer(count) >= 999 then  --maximum value for 3 decimal digits
+				count <= x"000";  --rollover		
+			else
+				if switch10 = '0' and switch100 = '0' and button = '0' then
+					frequency := frequency + 1;
+					count <= to_unsigned(frequency, count'length);
+					state <= s1;
+						
+				elsif switch10='1' and switch100='0' and button='0' then
+					frequency := frequency + 10;
+					count <= to_unsigned(frequency, count'length);
+					state <= s1;
+						
+				elsif switch10='0' and switch100='1' and button='0' then
+					frequency := frequency + 100;
+					count <= to_unsigned(frequency, count'length);
+					state <= s1;
+					
+				elsif reset ='0' then
+					timer := 0;
+					state<=s2;
+				
+				elsif switch = '1' then
+					count <= x"000";
+					sseg6 <= "10100001";
+					state <= s3;
+					
+				else
+					state <= s0;
+				end if;
+			end if;
+		
+		when s1 =>
+			if button = '0' then 
+				state <= s1;			
+			else
+				state <= s0;
+			end if;
+			
+		when s2=>
+			if (reset = '0' and timer < 150000000) then
+				state <= s2;
+				timer := timer + 1;
+							
+			elsif (timer >= 150000000) then
+				if (switch = '0')then
+					state <= s0;
+					frequency := 0;
+					count <= x"000";
+					timer := 0;
+				elsif (switch = '1') then
+					state <= s3;
+					dutyCycle := 0;
+					count <= x"000";
+					timer := 0;
+				end if;
+			else
+				if (switch = '0')then
+					state <= s0;
+					timer := 0;
+				else
+					state <= s3;
+					timer :=0;
+				end if;
+			end if;
+			
+	end case;
+end if;
+end process;
+end behavioural;
+		
+		
+		
+		
+		
+		
+		
+		
