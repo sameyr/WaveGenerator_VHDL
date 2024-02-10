@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pwm
-Sun Feb  4 16:56:40 2024
+Fri Feb  9 13:47:53 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -51,14 +51,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Feb  4 16:56:39 2024          ;
+; Analysis & Synthesis Status     ; Successful - Fri Feb  9 13:47:53 2024          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; pwm                                            ;
 ; Top-level Entity Name           ; pwm                                            ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 281                                            ;
-; Total pins                      ; 40                                             ;
+; Total registers                 ; 291                                            ;
+; Total pins                      ; 43                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
 ; Total DSP Blocks                ; 2                                              ;
@@ -182,17 +182,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                               ; Library ;
 +----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------+---------+
-; pwm.vhd                          ; yes             ; User VHDL File               ; D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/pwm.vhd                                           ;         ;
-; doubleDabble.vhd                 ; yes             ; User VHDL File               ; D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/doubleDabble.vhd                                  ;         ;
-; ssegPackage.vhd                  ; yes             ; User VHDL File               ; D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/ssegPackage.vhd                                   ;         ;
+; pwm.vhd                          ; yes             ; User VHDL File               ; D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/pwm.vhd                                ;         ;
+; doubleDabble.vhd                 ; yes             ; User VHDL File               ; D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/doubleDabble.vhd                       ;         ;
+; ssegPackage.vhd                  ; yes             ; User VHDL File               ; D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/ssegPackage.vhd                        ;         ;
+; DAC_interface.vhd                ; yes             ; User VHDL File               ; D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/DAC_interface.vhd                      ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/uog_file/year_3/hardware_system_and_control/quartus/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/uog_file/year_3/hardware_system_and_control/quartus/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/uog_file/year_3/hardware_system_and_control/quartus/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
 ; aglobal221.inc                   ; yes             ; Megafunction                 ; d:/uog_file/year_3/hardware_system_and_control/quartus/quartus/libraries/megafunctions/aglobal221.inc      ;         ;
-; db/lpm_divide_rqo.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/db/lpm_divide_rqo.tdf                             ;         ;
-; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/db/abs_divider_4dg.tdf                            ;         ;
-; db/alt_u_div_o2f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/db/alt_u_div_o2f.tdf                              ;         ;
-; db/lpm_abs_4p9.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/db/lpm_abs_4p9.tdf                                ;         ;
+; db/lpm_divide_rqo.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/db/lpm_divide_rqo.tdf                  ;         ;
+; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/db/abs_divider_4dg.tdf                 ;         ;
+; db/alt_u_div_o2f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/db/alt_u_div_o2f.tdf                   ;         ;
+; db/lpm_abs_4p9.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/db/lpm_abs_4p9.tdf                     ;         ;
 +----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -201,25 +202,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 1571      ;
+; Estimate of Logic utilization (ALMs needed) ; 1574      ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 2986      ;
+; Combinational ALUT usage for logic          ; 2992      ;
 ;     -- 7 input functions                    ; 1         ;
 ;     -- 6 input functions                    ; 141       ;
-;     -- 5 input functions                    ; 1050      ;
-;     -- 4 input functions                    ; 982       ;
-;     -- <=3 input functions                  ; 812       ;
+;     -- 5 input functions                    ; 1052      ;
+;     -- 4 input functions                    ; 981       ;
+;     -- <=3 input functions                  ; 817       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 281       ;
+; Dedicated logic registers                   ; 291       ;
 ;                                             ;           ;
-; I/O pins                                    ; 40        ;
+; I/O pins                                    ; 43        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 2         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 281       ;
-; Total fan-out                               ; 13966     ;
-; Average fan-out                             ; 4.17      ;
+; Maximum fan-out                             ; 290       ;
+; Total fan-out                               ; 14010     ;
+; Average fan-out                             ; 4.16      ;
 +---------------------------------------------+-----------+
 
 
@@ -228,7 +229,8 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                               ; Entity Name     ; Library Name ;
 +---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |pwm                                  ; 2986 (510)          ; 281 (213)                 ; 0                 ; 2          ; 40   ; 0            ; |pwm                                                                                              ;                 ;              ;
+; |pwm                                  ; 2992 (504)          ; 291 (212)                 ; 0                 ; 2          ; 43   ; 0            ; |pwm                                                                                              ;                 ;              ;
+;    |DAC_interface:dacinterface|       ; 12 (12)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |pwm|DAC_interface:dacinterface                                                                   ; DAC_interface   ; work         ;
 ;    |doubleDabble:threeDigit|          ; 53 (53)             ; 68 (68)                   ; 0                 ; 0          ; 0    ; 0            ; |pwm|doubleDabble:threeDigit                                                                      ; doubleDabble    ; work         ;
 ;    |lpm_divide:Div0|                  ; 1244 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |pwm|lpm_divide:Div0                                                                              ; lpm_divide      ; work         ;
 ;       |lpm_divide_rqo:auto_generated| ; 1244 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |pwm|lpm_divide:Div0|lpm_divide_rqo:auto_generated                                                ; lpm_divide_rqo  ; work         ;
@@ -275,16 +277,24 @@ Encoding Type:  One-Hot
 +----------+----------+----------+----------+----------+----------+----------+----------+
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; sseg6[5]~reg0                         ; Merged with sseg6[0]~reg0              ;
-; sseg6[6]~reg0                         ; Merged with sseg6[4]~reg0              ;
-; sseg6[4]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 3 ;                                        ;
-+---------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                ;
++----------------------------------------------+----------------------------------------------------+
+; Register name                                ; Reason for Removal                                 ;
++----------------------------------------------+----------------------------------------------------+
+; sseg6[4]~reg0                                ; Stuck at GND due to stuck port data_in             ;
+; sseg6[6]~reg0                                ; Stuck at GND due to stuck port data_in             ;
+; sseg6[7]~reg0                                ; Stuck at VCC due to stuck port data_in             ;
+; DAC_interface:dacinterface|sdi_arr[33,34]    ; Stuck at GND due to stuck port data_in             ;
+; DAC_interface:dacinterface|sdi_arr[5..8]     ; Stuck at VCC due to stuck port data_in             ;
+; DAC_interface:dacinterface|sdi_arr[0..4]     ; Stuck at GND due to stuck port data_in             ;
+; d_op[0,1,4,10]                               ; Merged with d_op[8]                                ;
+; pwm~reg0                                     ; Merged with d_op[8]                                ;
+; d_op[2,3,5..7,9,11]                          ; Merged with d_op[8]                                ;
+; sseg6[5]~reg0                                ; Merged with sseg6[0]~reg0                          ;
+; DAC_interface:dacinterface|sdi_arr[9,11..32] ; Merged with DAC_interface:dacinterface|sdi_arr[10] ;
+; Total Number of Removed Registers = 50       ;                                                    ;
++----------------------------------------------+----------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -292,12 +302,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 281   ;
+; Total registers                              ; 291   ;
 ; Number of registers using Synchronous Clear  ; 130   ;
 ; Number of registers using Synchronous Load   ; 75    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 210   ;
+; Number of registers using Clock Enable       ; 208   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -318,15 +328,14 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |pwm|doubleDabble:threeDigit|scratch[13] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |pwm|doubleDabble:threeDigit|scratch[17] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |pwm|doubleDabble:threeDigit|scratch[16] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |pwm|doubleDabble:threeDigit|scratch[19] ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |pwm|doubleDabble:threeDigit|scratch[21] ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |pwm|sseg6[0]~reg0                       ;
-; 5:1                ; 64 bits   ; 192 LEs       ; 0 LEs                ; 192 LEs                ; Yes        ; |pwm|period[2]                           ;
-; 7:1                ; 31 bits   ; 124 LEs       ; 31 LEs               ; 93 LEs                 ; Yes        ; |pwm|dutyCycle[11]                       ;
-; 8:1                ; 30 bits   ; 150 LEs       ; 60 LEs               ; 90 LEs                 ; Yes        ; |pwm|frequency[6]                        ;
-; 12:1               ; 28 bits   ; 224 LEs       ; 0 LEs                ; 224 LEs                ; Yes        ; |pwm|timer[0]                            ;
-; 14:1               ; 10 bits   ; 90 LEs        ; 40 LEs               ; 50 LEs                 ; Yes        ; |pwm|count[6]                            ;
+; 5:1                ; 64 bits   ; 192 LEs       ; 0 LEs                ; 192 LEs                ; Yes        ; |pwm|dutyCyclePeriod[28]                 ;
+; 7:1                ; 31 bits   ; 124 LEs       ; 31 LEs               ; 93 LEs                 ; Yes        ; |pwm|dutyCycle[1]                        ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 60 LEs               ; 90 LEs                 ; Yes        ; |pwm|frequency[5]                        ;
+; 12:1               ; 28 bits   ; 224 LEs       ; 0 LEs                ; 224 LEs                ; Yes        ; |pwm|timer[6]                            ;
+; 14:1               ; 10 bits   ; 90 LEs        ; 40 LEs               ; 50 LEs                 ; Yes        ; |pwm|count[7]                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
 
 
@@ -390,14 +399,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 281                         ;
-;     ENA               ; 47                          ;
+; arriav_ff             ; 291                         ;
+;     ENA               ; 45                          ;
 ;     ENA SCLR          ; 99                          ;
 ;     ENA SLD           ; 64                          ;
 ;     SCLR              ; 31                          ;
 ;     SLD               ; 11                          ;
-;     plain             ; 29                          ;
-; arriav_lcell_comb     ; 2991                        ;
+;     plain             ; 41                          ;
+; arriav_lcell_comb     ; 2997                        ;
 ;     arith             ; 1571                        ;
 ;         0 data inputs ; 104                         ;
 ;         1 data inputs ; 250                         ;
@@ -407,23 +416,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         5 data inputs ; 970                         ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 1410                        ;
+;     normal            ; 1416                        ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 38                          ;
-;         2 data inputs ; 142                         ;
-;         3 data inputs ; 89                          ;
-;         4 data inputs ; 918                         ;
-;         5 data inputs ; 80                          ;
+;         1 data inputs ; 37                          ;
+;         2 data inputs ; 144                         ;
+;         3 data inputs ; 93                          ;
+;         4 data inputs ; 917                         ;
+;         5 data inputs ; 82                          ;
 ;         6 data inputs ; 141                         ;
 ;     shared            ; 9                           ;
 ;         0 data inputs ; 3                           ;
 ;         2 data inputs ; 3                           ;
 ;         4 data inputs ; 3                           ;
 ; arriav_mac            ; 2                           ;
-; boundary_port         ; 40                          ;
+; boundary_port         ; 43                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 98.20                       ;
-; Average LUT depth     ; 73.63                       ;
+; Average LUT depth     ; 73.39                       ;
 +-----------------------+-----------------------------+
 
 
@@ -432,7 +441,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -442,64 +451,69 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Feb  4 16:56:27 2024
+    Info: Processing started: Fri Feb  9 13:47:36 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pwm -c pwm
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file pwm.vhd
-    Info (12022): Found design unit 1: pwm-behavioural File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/pwm.vhd Line: 14
-    Info (12023): Found entity 1: pwm File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/pwm.vhd Line: 6
+    Info (12022): Found design unit 1: pwm-behavioural File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/pwm.vhd Line: 15
+    Info (12023): Found entity 1: pwm File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/pwm.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file doubledabble.vhd
-    Info (12022): Found design unit 1: doubleDabble-rtl File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/doubleDabble.vhd Line: 13
-    Info (12023): Found entity 1: doubleDabble File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/doubleDabble.vhd Line: 5
+    Info (12022): Found design unit 1: doubleDabble-rtl File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/doubleDabble.vhd Line: 13
+    Info (12023): Found entity 1: doubleDabble File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/doubleDabble.vhd Line: 5
 Info (12021): Found 2 design units, including 0 entities, in source file ssegpackage.vhd
-    Info (12022): Found design unit 1: ssegPackage File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/ssegPackage.vhd Line: 7
-    Info (12022): Found design unit 2: ssegPackage-body File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/ssegPackage.vhd Line: 13
+    Info (12022): Found design unit 1: ssegPackage File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/ssegPackage.vhd Line: 7
+    Info (12022): Found design unit 2: ssegPackage-body File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/ssegPackage.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file dac_interface.vhd
+    Info (12022): Found design unit 1: DAC_interface-rtl File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/DAC_interface.vhd Line: 25
+    Info (12023): Found entity 1: DAC_interface File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/DAC_interface.vhd Line: 13
 Info (12127): Elaborating entity "pwm" for the top level hierarchy
-Info (12128): Elaborating entity "doubleDabble" for hierarchy "doubleDabble:threeDigit" File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/pwm.vhd Line: 37
+Info (12128): Elaborating entity "doubleDabble" for hierarchy "doubleDabble:threeDigit" File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/pwm.vhd Line: 48
+Info (12128): Elaborating entity "DAC_interface" for hierarchy "DAC_interface:dacinterface" File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/pwm.vhd Line: 49
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/pwm.vhd Line: 83
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1" File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/pwm.vhd Line: 84
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/pwm.vhd Line: 83
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/pwm.vhd Line: 83
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/pwm.vhd Line: 94
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1" File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/pwm.vhd Line: 95
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/pwm.vhd Line: 94
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/pwm.vhd Line: 94
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_rqo.tdf
-    Info (12023): Found entity 1: lpm_divide_rqo File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/db/lpm_divide_rqo.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_rqo File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/db/lpm_divide_rqo.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_4dg.tdf
-    Info (12023): Found entity 1: abs_divider_4dg File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/db/abs_divider_4dg.tdf Line: 27
+    Info (12023): Found entity 1: abs_divider_4dg File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/db/abs_divider_4dg.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_o2f.tdf
-    Info (12023): Found entity 1: alt_u_div_o2f File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/db/alt_u_div_o2f.tdf Line: 23
+    Info (12023): Found entity 1: alt_u_div_o2f File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/db/alt_u_div_o2f.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_4p9.tdf
-    Info (12023): Found entity 1: lpm_abs_4p9 File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/db/lpm_abs_4p9.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1" File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/pwm.vhd Line: 84
-Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter: File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/pwm.vhd Line: 84
+    Info (12023): Found entity 1: lpm_abs_4p9 File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/db/lpm_abs_4p9.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div1" File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/pwm.vhd Line: 95
+Info (12133): Instantiated megafunction "lpm_divide:Div1" with the following parameter: File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/pwm.vhd Line: 95
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "sseg0[7]" is stuck at VCC File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/pwm.vhd Line: 10
-    Warning (13410): Pin "sseg1[7]" is stuck at VCC File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/pwm.vhd Line: 10
-    Warning (13410): Pin "sseg2[7]" is stuck at VCC File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/pwm.vhd Line: 10
-    Warning (13410): Pin "sseg6[4]" is stuck at GND File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/pwm.vhd Line: 51
-    Warning (13410): Pin "sseg6[6]" is stuck at GND File: D:/UoG_file/Year_3/Hardware_System_and_Control/final_pwm/pwm.vhd Line: 51
+    Warning (13410): Pin "sseg0[7]" is stuck at VCC File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/pwm.vhd Line: 11
+    Warning (13410): Pin "sseg1[7]" is stuck at VCC File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/pwm.vhd Line: 11
+    Warning (13410): Pin "sseg2[7]" is stuck at VCC File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/pwm.vhd Line: 11
+    Warning (13410): Pin "sseg6[4]" is stuck at GND File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/pwm.vhd Line: 63
+    Warning (13410): Pin "sseg6[6]" is stuck at GND File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/pwm.vhd Line: 63
+    Warning (13410): Pin "sseg6[7]" is stuck at VCC File: D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/final_pwm/pwm.vhd Line: 63
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3053 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3063 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 3011 logic cells
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 3018 logic cells
     Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4919 megabytes
-    Info: Processing ended: Sun Feb  4 16:56:40 2024
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:24
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4908 megabytes
+    Info: Processing ended: Fri Feb  9 13:47:53 2024
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:31
 
 

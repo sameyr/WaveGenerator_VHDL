@@ -8,37 +8,37 @@ z2
 !i10f 100
 cModel Technology
 dD:/UoG_file/ModelSim
-Esinewavegenerator
-Z0 w1707084002
+Epwm
+Z0 w1707427840
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z4 dD:/UoG_file/Year_3/Hardware_System_and_Control/assignment/sinewave_tb
-Z5 8D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/sinewave_tb/sineWaveGenerator.vhd
-Z6 FD:/UoG_file/Year_3/Hardware_System_and_Control/assignment/sinewave_tb/sineWaveGenerator.vhd
+Z5 8D:\UoG_file\Year_3\Hardware_System_and_Control\assignment\sinewave_tb\pwm.vhd
+Z6 FD:\UoG_file\Year_3\Hardware_System_and_Control\assignment\sinewave_tb\pwm.vhd
 l0
-L6
-V2I[Wc>l??_WN77IXf4aSl1
-!s100 YzLUZ?ABmXFziP3W:;mi72
+L5
+VP3A3^kQEOFjXGK@=e5Vb21
+!s100 Bo8hP0e`><G3J]egRFZ=>0
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1707084507
+Z8 !s110 1707427844
 !i10b 1
-Z9 !s108 1707084507.000000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/sinewave_tb/sineWaveGenerator.vhd|
-Z11 !s107 D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/sinewave_tb/sineWaveGenerator.vhd|
+Z9 !s108 1707427844.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:\UoG_file\Year_3\Hardware_System_and_Control\assignment\sinewave_tb\pwm.vhd|
+Z11 !s107 D:\UoG_file\Year_3\Hardware_System_and_Control\assignment\sinewave_tb\pwm.vhd|
 !i113 1
 Z12 o-work work -2002 -explicit
 Z13 tExplicit 1 CvgOpt 0
-Abehavioral
+Abehavioural
 R1
 R2
 R3
-DEx4 work 17 sinewavegenerator 0 22 2I[Wc>l??_WN77IXf4aSl1
-l26
-L17
-V88Q5`9c]MQ^YVniofjaFP1
-!s100 FnU=`T=lVaECYhoFhVh8Z3
+DEx4 work 3 pwm 0 22 P3A3^kQEOFjXGK@=e5Vb21
+l17
+L12
+VNdJO0A_;aE63=<`5Rk;od2
+!s100 ^B=[T<zzOIg:maL6LLMEB3
 R7
 32
 R8
@@ -49,25 +49,107 @@ R11
 !i113 1
 R12
 R13
-Etb_sinewavegenerator
-Z14 w1707084193
+Epwm_try
+Z14 w1707230563
 R1
 R2
 R3
 R4
-Z15 8D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/sinewave_tb/tb_sineWaveGenerator.vhd
-Z16 FD:/UoG_file/Year_3/Hardware_System_and_Control/assignment/sinewave_tb/tb_sineWaveGenerator.vhd
+R5
+R6
 l0
-L5
-V;LR>akljZ`Q1BFQ4LM7Gh1
-!s100 YBg;G3^jL0KPb9n=C>?kS1
+L6
+V8giT1[9jRig09i<[G0^j:3
+!s100 CFkaMIBKiJKg>=b_>1[EZ0
 R7
 32
-Z17 !s110 1707084508
+Z15 !s110 1707230570
 !i10b 1
-Z18 !s108 1707084508.000000
-Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/sinewave_tb/tb_sineWaveGenerator.vhd|
-Z20 !s107 D:/UoG_file/Year_3/Hardware_System_and_Control/assignment/sinewave_tb/tb_sineWaveGenerator.vhd|
+Z16 !s108 1707230570.000000
+R10
+R11
+!i113 1
+R12
+R13
+Abehavioural
+R1
+R2
+R3
+DEx4 work 7 pwm_try 0 22 8giT1[9jRig09i<[G0^j:3
+l22
+L13
+VDESJ@P[]mnUPfQYg8T5PV3
+!s100 N=DQ7hd?TTRz?KjlLXz@W2
+R7
+32
+R15
+!i10b 1
+R16
+R10
+R11
+!i113 1
+R12
+R13
+Esinewavegenerator
+Z17 w1707483763
+R1
+R2
+R3
+R4
+Z18 8D:\UoG_file\Year_3\Hardware_System_and_Control\assignment\sinewave_tb\sineWaveGenerator.vhd
+Z19 FD:\UoG_file\Year_3\Hardware_System_and_Control\assignment\sinewave_tb\sineWaveGenerator.vhd
+l0
+L6
+VAiT]C6z5G9bYo_ghiYdkJ3
+!s100 0;7PVa@6NAKocXeQ[KG3B3
+R7
+32
+Z20 !s110 1707483777
+!i10b 1
+Z21 !s108 1707483777.000000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:\UoG_file\Year_3\Hardware_System_and_Control\assignment\sinewave_tb\sineWaveGenerator.vhd|
+Z23 !s107 D:\UoG_file\Year_3\Hardware_System_and_Control\assignment\sinewave_tb\sineWaveGenerator.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+Z24 DEx4 work 17 sinewavegenerator 0 22 AiT]C6z5G9bYo_ghiYdkJ3
+l41
+L17
+V]:>J3Q97c6_mg8K1=jl:i3
+!s100 cYNGL7eQQ6ZFlS?CbHfz[3
+R7
+32
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R12
+R13
+Etb_pwm
+Z25 w1707352970
+R1
+R2
+R3
+R4
+Z26 8D:\UoG_file\Year_3\Hardware_System_and_Control\assignment\sinewave_tb\tb_pwm.vhd
+Z27 FD:\UoG_file\Year_3\Hardware_System_and_Control\assignment\sinewave_tb\tb_pwm.vhd
+l0
+L6
+VUZ7]G2ImQTB^zjf81a4ZF0
+!s100 9NBOU0RCCc@>N6B_7UEOD2
+R7
+32
+Z28 !s110 1707400479
+!i10b 1
+Z29 !s108 1707400479.000000
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:\UoG_file\Year_3\Hardware_System_and_Control\assignment\sinewave_tb\tb_pwm.vhd|
+Z31 !s107 D:\UoG_file\Year_3\Hardware_System_and_Control\assignment\sinewave_tb\tb_pwm.vhd|
 !i113 1
 R12
 R13
@@ -75,18 +157,59 @@ Atestbench
 R1
 R2
 R3
-Z21 DEx4 work 20 tb_sinewavegenerator 0 22 ;LR>akljZ`Q1BFQ4LM7Gh1
-l25
-L8
-Z22 Vi?88]k4SIXQ8g_CIV9MlY1
-Z23 !s100 gIRnizFeTGNgDH]Qm[iLZ1
+DEx4 work 6 tb_pwm 0 22 UZ7]G2ImQTB^zjf81a4ZF0
+l21
+L9
+VgPFbbT4IM1G44Omcc3S<M3
+!s100 ];JGmNDlV?YWSYAzHL:c43
 R7
 32
-R17
+R28
 !i10b 1
-R18
-R19
-R20
+R29
+R30
+R31
+!i113 1
+R12
+R13
+Etb_sinewavegenerator
+Z32 w1707481199
+R1
+R2
+R3
+R4
+Z33 8D:\UoG_file\Year_3\Hardware_System_and_Control\assignment\sinewave_tb\tb_sineWaveGenerator.vhd
+Z34 FD:\UoG_file\Year_3\Hardware_System_and_Control\assignment\sinewave_tb\tb_sineWaveGenerator.vhd
+l0
+L5
+V;LR>akljZ`Q1BFQ4LM7Gh1
+!s100 YBg;G3^jL0KPb9n=C>?kS1
+R7
+32
+Z35 !s110 1707481498
+!i10b 1
+Z36 !s108 1707481498.000000
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:\UoG_file\Year_3\Hardware_System_and_Control\assignment\sinewave_tb\tb_sineWaveGenerator.vhd|
+Z38 !s107 D:\UoG_file\Year_3\Hardware_System_and_Control\assignment\sinewave_tb\tb_sineWaveGenerator.vhd|
+!i113 1
+R12
+R13
+Atestbench
+R1
+R2
+R3
+DEx4 work 20 tb_sinewavegenerator 0 22 ;LR>akljZ`Q1BFQ4LM7Gh1
+l19
+L8
+V3F=VG`?Wk<0zPLMaFLj=R3
+!s100 IVV[N8^]9Oi<lYi8ah@fe2
+R7
+32
+R35
+!i10b 1
+R36
+R37
+R38
 !i113 1
 R12
 R13

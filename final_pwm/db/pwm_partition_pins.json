@@ -8,6 +8,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "cs_l",
+					"strict" : false
+				},
+				{
+					"name" : "sck",
+					"strict" : false
+				},
+				{
+					"name" : "sdi",
+					"strict" : false
+				},
+				{
 					"name" : "sseg0[0]",
 					"strict" : false
 				},
@@ -109,10 +121,6 @@
 				},
 				{
 					"name" : "sseg6[5]",
-					"strict" : false
-				},
-				{
-					"name" : "sseg6[7]",
 					"strict" : false
 				},
 				{

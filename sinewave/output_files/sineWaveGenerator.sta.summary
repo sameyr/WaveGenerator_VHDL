@@ -3,51 +3,99 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -73.686
-TNS   : -3366.793
+Slack : -73.952
+TNS   : -3548.638
+
+Type  : Slow 1100mV 85C Model Setup 'DAC_interface:dacinterface|loadData'
+Slack : -3.451
+TNS   : -24.802
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.366
+Slack : 0.225
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'DAC_interface:dacinterface|loadData'
+Slack : 2.251
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
 Slack : -0.394
-TNS   : -121.382
+TNS   : -139.506
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'DAC_interface:dacinterface|loadData'
+Slack : -0.394
+TNS   : -4.285
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -75.886
-TNS   : -3425.853
+Slack : -76.000
+TNS   : -3596.852
+
+Type  : Slow 1100mV 0C Model Setup 'DAC_interface:dacinterface|loadData'
+Slack : -3.574
+TNS   : -25.981
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.369
+Slack : 0.135
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'DAC_interface:dacinterface|loadData'
+Slack : 2.422
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
 Slack : -0.394
-TNS   : -129.917
+TNS   : -149.987
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'DAC_interface:dacinterface|loadData'
+Slack : -0.394
+TNS   : -4.210
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -39.586
-TNS   : -1766.518
+Slack : -40.064
+TNS   : -1872.775
+
+Type  : Fast 1100mV 85C Model Setup 'DAC_interface:dacinterface|loadData'
+Slack : -1.694
+TNS   : -11.680
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 0.181
+Slack : 0.131
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'DAC_interface:dacinterface|loadData'
+Slack : 1.096
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.095
-TNS   : -20.562
+Slack : -0.397
+TNS   : -23.424
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'DAC_interface:dacinterface|loadData'
+Slack : 0.061
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -37.745
-TNS   : -1648.950
+Slack : -38.055
+TNS   : -1743.006
+
+Type  : Fast 1100mV 0C Model Setup 'DAC_interface:dacinterface|loadData'
+Slack : -1.656
+TNS   : -11.585
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 0.171
+Slack : -0.112
+TNS   : -0.112
+
+Type  : Fast 1100mV 0C Model Hold 'DAC_interface:dacinterface|loadData'
+Slack : 1.113
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.093
-TNS   : -20.263
+Slack : -0.410
+TNS   : -23.195
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'DAC_interface:dacinterface|loadData'
+Slack : 0.087
+TNS   : 0.000
 
 ------------------------------------------------------------

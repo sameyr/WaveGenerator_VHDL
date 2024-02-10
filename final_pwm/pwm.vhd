@@ -5,9 +5,10 @@ use work.ssegPackage.all;
 
 entity pwm is port
 (
-	button, switch10, switch100, changeState_switch, set_btn, reset, clk	: in std_logic;
-	pwm 																						:out std_logic; 
-	sseg0, sseg1, sseg2, sseg6	  			   									   : out std_logic_vector(7 downto 0)	
+	button, switch10, switch100, changeState_switch, set_btn, reset, clk: in std_logic;
+	pwm 									:out std_logic; 
+	cs_l,sck,sdi 						:out std_logic; --DAC input pins
+	sseg0, sseg1, sseg2, sseg6	  	: out std_logic_vector(7 downto 0)	
 );
 end pwm;
 
@@ -16,7 +17,8 @@ architecture behavioural of pwm is
 -- enumerated type for the state machine
 type state_type is (s0, s1, s2, s3,s4, s5,s6);
 
-signal state : state_type := s2;
+signal state : state_type := s0;
+signal d_op : std_logic_vector(11 downto 0) := "000000000000"; --DAC input
 signal count : unsigned(11 downto 0):= x"000"; --counter to be shown in sseg
 signal bcd : std_logic_vector (15 downto 0);   --binary coded decimal using double dabble
 signal clk_50 : std_logic;
@@ -30,11 +32,21 @@ component doubleDabble
 	);
 end component;
 
+component DAC_interface
+	port
+	(
+		clk		  : in std_logic;  --connected to 50MHz system clock
+		d	 			 : in std_logic_vector(11 downto 0); --connected to parallel digital data in binary format, MSB on the left
+		cs_l,sck,sdi	  : out std_logic --SPI control pins on MCP4921
+	);
+end component;
+
 begin
 
 clk_50 <= clk;
 
 	threeDigit: doubleDabble port map (clk => clk_50, binaryIn => count, bcd => bcd); --converts 12 bit binary to 3 digit binary coded decimal (bcd)
+	dacinterface: DAC_interface port map (clk =>clk_50, d => d_op, cs_l => cs_l, sck => sck, sdi => sdi );
 	sseg0 <= ssegCode(bcd(3 downto 0));
 	sseg1 <= ssegCode(bcd(7 downto 4));
 	sseg2 <= ssegCode(bcd(11 downto 8));
@@ -44,13 +56,11 @@ process(clk, button, switch100, switch10, changeState_switch, reset)
 	constant clock_freq : integer := 50000000;	--internal clock frequency
 	variable frequency, counter, dutyCycle, period, dutyCyclePeriod: integer := 0;	-- all the required variable 
 	variable timer : integer range 0 to 150000000 := 0;
-
 	
 	begin
 
 	if (rising_edge(clk)) then
-	case state is 
-	
+	case state is 	
 	
 		when s0 =>
 			sseg6 <= "10001110";
@@ -83,7 +93,7 @@ process(clk, button, switch100, switch10, changeState_switch, reset)
 					period := clock_freq / frequency ;
 					state <= s5;
 				
-				elsif changeState_switch = '1' then 			--transition to duty cycle state 
+				elsif changeState_switch = '1' then 	--transition to frequency state 	
 					count <=to_unsigned(dutyCycle, count'length);
 					state <= s2;
 					
@@ -98,7 +108,6 @@ process(clk, button, switch100, switch10, changeState_switch, reset)
 			else
 				state<= s0;			--goes back to S0
 			end if;
-			
 			
 		when s2=>
 		
@@ -144,7 +153,6 @@ process(clk, button, switch100, switch10, changeState_switch, reset)
 				state<= s2;
 			end if;
 			
-		
 		when s4=>
 		-- reset state
 			sseg6 <= "10001000";
@@ -191,6 +199,7 @@ process(clk, button, switch100, switch10, changeState_switch, reset)
 				elsif (changeState_switch = '1') then
 					state <= s3;
 					timer := 0;
+				end if;
 			end if;
 			
 		when s6 =>
@@ -198,19 +207,19 @@ process(clk, button, switch100, switch10, changeState_switch, reset)
 			
 			if counter < dutyCyclePeriod  then --checking if counter is less than high period
 						PWM <='1';		-- setting output to 1 & LED is turned onn
+						d_op <= "111111111111"; -- DAC input
 			end if;
 							
 			if counter >dutyCyclePeriod and counter < period  then
 						PWM <='0';		-- setting output to 0 & LED is turned off
+						d_op <= "000000000000"; -- DAC input
 			end if;
 							
 			if counter  > period then
 						counter:=0;		--resetting counter
 			end if;
-			
 				counter := counter + 1;	--increasing counter
 				state <= s6;
-			
 	end case;
 end if;
 end process;

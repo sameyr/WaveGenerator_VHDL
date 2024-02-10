@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sun Feb  4 16:56:39 2024
+Analysis & Synthesis Status : Successful - Fri Feb  9 13:47:53 2024
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : pwm
 Top-level Entity Name : pwm
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 281
-Total pins : 40
+Total registers : 291
+Total pins : 43
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 2

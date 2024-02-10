@@ -4,6 +4,18 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "cs_l",
+					"strict" : false
+				},
+				{
+					"name" : "sck",
+					"strict" : false
+				},
+				{
+					"name" : "sdi",
+					"strict" : false
+				},
+				{
 					"name" : "led_out[0]",
 					"strict" : false
 				},
@@ -13,6 +25,14 @@
 				},
 				{
 					"name" : "led_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[4]",
 					"strict" : false
 				},
 				{
@@ -113,6 +133,18 @@
 				},
 				{
 					"name" : "sseg2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg6[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg6[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sseg6[4]",
 					"strict" : false
 				},
 				{

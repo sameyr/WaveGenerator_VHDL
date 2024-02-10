@@ -6,47 +6,34 @@ entity tb_sineWaveGenerator is
 end tb_sineWaveGenerator;
 
 architecture testbench of tb_sineWaveGenerator is
-    signal clk : std_logic := '0';
-    signal led_out : std_logic_vector(2 downto 0);
-	 signal frequency : integer := 1;
-    constant clock_period : time := 20 ns;  -- Adjust as needed
 
-    component sineWaveGenerator
-        generic (
-            NUM_POINTS    : integer := 30;
-            MAX_AMPLITUDE : integer := 255
-        );
-        port (
-            clk          : in  std_logic;
-            led_out      : out std_logic_vector(2 downto 0)
-        );
-    end component;
+signal tb_clk : std_logic := '0';
+signal tb_out : integer:=128;  
+  
+component sineWaveGenerator is
+			 
+	port (clk :in  std_logic;
+			led_out: out integer
+	); 
+end component;
+begin
 
-    begin
-        dut : sineWaveGenerator
-            generic map (
-                NUM_POINTS    => 30,
-                MAX_AMPLITUDE => 255
-            )
-            port map (
-                clk          => clk,
-                led_out      => led_out
-            );
-
-        process
-        begin
-            -- Initialize clock
-            clk <= '0';
-            wait for clock_period / 2;
-
-            -- Apply clock cycles and observe output
-            for i in 1 to 1000 loop
-                clk <= not clk;  -- Toggle clock
-                wait for clock_period / 2;
-
-            end loop;
-
-            wait;
-        end process;
-
+DUT:sineWaveGenerator
+ generic map (
+    NUM_POINTS    => 30,
+    MAX_AMPLITUDE => 255
+  )
+  port map (
+    clk      => tb_clk,
+    led_out  => tb_out
+  );
+			
+process 
+  begin
+		 tb_clk <= '0';
+		wait for 10 ns;
+		tb_clk <= '1';
+		wait for 10 ns;
+end process;
+ 
 end testbench;

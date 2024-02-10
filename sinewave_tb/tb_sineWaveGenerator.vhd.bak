@@ -1,1 +1,34 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
+entity tb_sineWaveGenerator is
+end tb_sineWaveGenerator;
+
+architecture testbench of tb_sineWaveGenerator is
+
+signal tb_clk : std_logic := "0";
+signal tb_led_out : std_logic_vector(2 downto 0) := "000";  
+  
+component sineWaveGenerator is
+			 
+	port (clk :in  std_logic;
+			led_out: out std_logic_vector(2 downto 0) := "000"
+	); 
+end component;
+begin
+
+DUT:sineWaveGenerator
+port map(
+			clk => tb_clk,
+			led_out => tb_led_out 
+			);
+			
+process 
+  begin
+    
+      wait for 10 ns;
+      tb_clk <= not tb_clk;
+end process;
+ 
+end testbench;
