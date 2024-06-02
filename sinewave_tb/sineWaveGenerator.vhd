@@ -20,7 +20,7 @@ architecture Behavioral of sineWaveGenerator is
 	signal Tc, counter : integer := 0;
 	signal i : integer range 0 to NUM_POINTS := 0;
 	type memory_type is array (0 to NUM_POINTS-1) of integer range 0 to MAX_AMPLITUDE;
-	signal frequency : integer := 500;
+	signal frequency : integer := 100;
 	signal sine : memory_type :=(128, 132, 136, 140, 144, 148, 152, 155, 159, 163, 167, 171,
 											174, 178, 182, 185, 189, 192, 196, 199, 203, 206, 209, 212,
 											215, 218, 220, 223, 226, 228, 231, 233, 235, 237, 239, 241,

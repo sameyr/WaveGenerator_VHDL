@@ -91,7 +91,7 @@ R11
 R12
 R13
 Esinewavegenerator
-Z17 w1707483763
+Z17 w1708699039
 R1
 R2
 R3
@@ -104,9 +104,9 @@ VAiT]C6z5G9bYo_ghiYdkJ3
 !s100 0;7PVa@6NAKocXeQ[KG3B3
 R7
 32
-Z20 !s110 1707483777
+Z20 !s110 1708699057
 !i10b 1
-Z21 !s108 1707483777.000000
+Z21 !s108 1708699057.000000
 Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:\UoG_file\Year_3\Hardware_System_and_Control\assignment\sinewave_tb\sineWaveGenerator.vhd|
 Z23 !s107 D:\UoG_file\Year_3\Hardware_System_and_Control\assignment\sinewave_tb\sineWaveGenerator.vhd|
 !i113 1
@@ -119,8 +119,8 @@ R3
 Z24 DEx4 work 17 sinewavegenerator 0 22 AiT]C6z5G9bYo_ghiYdkJ3
 l41
 L17
-V]:>J3Q97c6_mg8K1=jl:i3
-!s100 cYNGL7eQQ6ZFlS?CbHfz[3
+VH2<KJFG=93P:j6iSl6@W62
+!s100 oXOdSj0N0]j3hV@[hCcYU3
 R7
 32
 R20
