@@ -31,4 +31,4 @@ The project met most technical requirements, but improvements could be made in e
 ### Contributor
 1. Samir Shrestha
 
-    LinkedIn Profile: [LinkedIn](https://www.linkedin.com/in/sameyr/)
+    LinkedIn Profile: [Samir Shrestha](https://www.linkedin.com/in/sameyr/)
